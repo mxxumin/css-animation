@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>播放按钮旋转效果</title>
+    <style type="text/css">
+      body{
+        background:#000;
+      }
+      /*视频播放按钮的样式*/
+      .play-btn{
+        position:relative;
+        width:191px;
+        height:191px;
+        margin:50px auto;
+        background:url(img/playbtn.png) center center no-repeat;
+        cursor:pointer;
+      }
+      .play-btn-1{
+        position:absolute;
+        top:0;
+        left:0;
+        width:191px;
+        height:191px;
+        background:url(img/playbtn1.png) center center no-repeat;
+        cursor:pointer;
+        -webkit-animation:clockwise 3s linear 0.3s infinite;
+           -moz-animation:clockwise 3s linear 0.3s infinite;
+            -ms-animation:clockwise 3s linear 0.3s infinite;
+             -o-animation:clockwise 3s linear 0.3s infinite;
+                animation:clockwise 3s linear 0.3s infinite;
+      }
+      .play-btn-2{
+        position:absolute;
+        top:0;
+        left:0;
+        width:191px;
+        height:191px;
+        background:url(img/playbtn2.png) center center no-repeat;
+        cursor:pointer;
+        -webkit-animation:anticlockwise 3s linear 0.3s infinite;
+           -moz-animation:anticlockwise 3s linear 0.3s infinite;
+            -ms-animation:anticlockwise 3s linear 0.3s infinite;
+             -o-animation:anticlockwise 3s linear 0.3s infinite;
+                animation:anticlockwise 3s linear 0.3s infinite;
+      }
+      /*当鼠标移动到视频播放按钮上时，旋转暂停，移开后，旋转继续*/
+      .play-btn:hover .play-btn-1,.play-btn:hover .play-btn-2{
+      	-webkit-animation-play-state:paused;
+      	   -moz-animation-play-state:paused;
+      	    -ms-animation-play-state:paused;
+      	     -o-animation-play-state:paused;
+      	        animation-play-state:paused;
+      }
+      @keyframes clockwise { /*顺时针旋转*/
+        0% {
+          -webkit-transform:rotate(0deg);
+             -moz-transform:rotate(0deg);
+              -ms-transform:rotate(0deg);
+               -o-transform:rotate(0deg);
+                  transform:rotate(0deg);
+        }
+        50% {
+          -webkit-transform:rotate(180deg);
+             -moz-transform:rotate(180deg);
+              -ms-transform:rotate(180deg);
+               -o-transform:rotate(180deg);
+                  transform:rotate(180deg);
+        }
+        100% {
+          -webkit-transform:rotate(360deg);
+             -moz-transform:rotate(360deg);
+              -ms-transform:rotate(360deg);
+               -o-transform:rotate(360deg);
+                  transform:rotate(360deg);
+        }
+      }
+      @keyframes anticlockwise { /*逆时针旋转*/
+        0% {
+          -webkit-transform:rotate(0deg);
+             -moz-transform:rotate(0deg);
+              -ms-transform:rotate(0deg);
+               -o-transform:rotate(0deg);
+                  transform:rotate(0deg);
+        }
+        50% {
+          -webkit-transform:rotate(-180deg);
+             -moz-transform:rotate(-180deg);
+              -ms-transform:rotate(-180deg);
+               -o-transform:rotate(-180deg);
+                  transform:rotate(-180deg);
+        }
+        100% {
+          -webkit-transform:rotate(-360deg);
+             -moz-transform:rotate(-360deg);
+              -ms-transform:rotate(-360deg);
+               -o-transform:rotate(-360deg);
+                  transform:rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="play-btn" href="javascript:void(0);">
+      <div class="play-btn-1" href="javascript:void(0);"></div>
+      <div class="play-btn-2" href="javascript:void(0);"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+#播放按钮旋转效果图如下：
+***
+![](img/播放按钮旋转.gif)
+***
+实现代码见<span style="background:#F4923D;">index.html文件</span>。
+图片素材见<span style="background:#F4923D;">img文件</span>。
