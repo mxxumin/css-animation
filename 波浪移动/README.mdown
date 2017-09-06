@@ -1,6 +1,6 @@
-#波浪移动效果图如下：
+# 波浪移动效果图如下：
 ***
 ![](img/波浪.gif)
 ***
-实现代码见<span style="background:#F4923D;">index.html文件</span>。
-图片素材见<span style="background:#F4923D;">img文件</span>。
+* 实现代码见`index.html`文件
+* 图片素材见`img`文件

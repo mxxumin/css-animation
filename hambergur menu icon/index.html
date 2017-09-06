@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hambergur menu icon</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class = "hamberger-menu-icon">
+		<span></span>
+	</div>
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    // 利用jQuery动态为class为hamberger-menu-icon的div添加switch类实现切换效果
+	$(".hamberger-menu-icon").click(function(){
+		$(this).toggleClass("switch")
+	})
+</script>
+</html>

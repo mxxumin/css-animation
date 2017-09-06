@@ -1,0 +1,80 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+body{
+	background:rgb(245, 215, 110);
+}
+@mixin transition($transition){
+	-webkit-transition:$transition;
+	   -moz-transition:$transition;
+	    -ms-transition:$transition;
+	     -o-transition:$transition;
+	        transition:$transition;
+}
+// 鼠标点击之前"汉堡形状"菜单图标
+.hamberger-menu-icon{
+	display:flex;
+	position:fixed;
+	top:20px;
+	left:20px;
+	justify-content:center;
+	align-items:center;
+	width:80px;
+	height:80px;
+	cursor:pointer;
+    
+    // 将<span>标签display设置为block，利用<span>标签实现水平横线效果，利用伪类:before和:after实现"汉堡形状"的菜单图标
+	span{
+		position:relative;
+		display:block;
+		width:45px;
+		height:4px;
+		border-radius:50px;
+		background:rgb(246, 36, 89);
+
+		&:before, &:after{
+			content:"";
+			position:absolute;
+			display:block;
+			width:100%;
+			height:100%;
+			border-radius:50px;
+			background:rgb(246, 36, 89);
+		    @include transition(top .2s .2s);
+		}
+
+		// 通过设置top值改变水平线条的位置
+		&:before{
+			top:-15px;
+		}
+
+		&:after{
+			top:15px;
+		}
+	}
+}
+// 当鼠标点击之后，"汉堡形状"的菜单图标变成关闭按钮
+.switch{
+	background:rgb(246, 36, 89);
+    
+    // 利用rotate旋转:before和:after形成的水平线，使其变为关闭按钮形状，此处利用"障眼法"将<span>标签的颜色变为背景色。
+	span{
+		background:rgb(246, 36, 89);
+
+		&:before, &:after{
+			top:0;
+			background:rgb(255, 255, 255);
+			@include transition(transform .2s .2s);
+		}
+
+		&:before{
+			transform:rotate(45deg);
+		}
+
+		&:after{
+			transform: rotate(-45deg);
+		}
+	}
+}
