@@ -13,17 +13,33 @@ body{
 	     -o-transition:$transition;
 	        transition:$transition;
 }
-// 鼠标点击之前"汉堡形状"菜单图标
-.hamberger-menu-icon{
+
+.number{
 	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	width:420px;
+	height:20px;
+
+	span{
+		display:block;
+		padding:0 40px 0 40px;
+	}
+}
+
+/* 利用<span>以及伪类(:before,:after)实现"汉堡形状"菜单按钮 */
+// 鼠标点击之前"汉堡形状"菜单图标
+.hamberger-menu-icon1{
 	position:fixed;
 	top:20px;
 	left:20px;
+	display:flex;
 	justify-content:center;
 	align-items:center;
 	width:80px;
 	height:80px;
 	cursor:pointer;
+	@include transition(.2s);
     
     // 将<span>标签display设置为block，利用<span>标签实现水平横线效果，利用伪类:before和:after实现"汉堡形状"的菜单图标
 	span{
@@ -56,7 +72,7 @@ body{
 	}
 }
 // 当鼠标点击之后，"汉堡形状"的菜单图标变成关闭按钮
-.switch{
+.switch1{
 	background:rgb(246, 36, 89);
     
     // 利用rotate旋转:before和:after形成的水平线，使其变为关闭按钮形状，此处利用"障眼法"将<span>标签的颜色变为背景色。
@@ -78,3 +94,196 @@ body{
 		}
 	}
 }
+/* end */
+
+/* 利用<span>标签实现"汉堡形状"菜单按钮 */
+.hamberger-menu-icon2{
+	position:fixed;
+	top:20px;
+	left:120px;
+	width:80px;
+	height:80px;
+	cursor:pointer;
+	transition:.5s;
+
+	span{
+		position:absolute;
+		display:block;
+		width:45px;
+		height:4px;
+		left:50%;
+		border-radius:20px;
+		margin-left:(-45px/2);
+		background:rgb(246, 36, 89);
+		@include transition(top .2s);
+		@include transition(transform .2s);
+
+		&:nth-child(1){
+			top:23px;
+		}
+		&:nth-child(2){
+			top:38px;
+		}
+		&:nth-child(3){
+			top:53px;
+		}
+	}
+} 
+.switch2{
+	background:rgb(246, 36, 89);
+
+	span{
+		background:rgb(255, 255, 255);
+
+		&:nth-child(1){
+			top:38px;
+			transform:rotate(45deg);
+		}
+		&:nth-child(2){
+			opacity:0;//width:0;或者将宽度变为0
+		}
+		&:nth-child(3){
+			top:38px;
+			transform:rotate(-45deg);
+		}
+	}
+}
+/* end */
+
+/* 利用<span>标签实现"汉堡形状"菜单按钮 */
+.hamberger-menu-icon3{
+	position:fixed;
+	top:20px;
+	left:220px;
+	width:80px;
+	height:80px;
+	cursor:pointer;
+	transition:.5s;
+
+	span{
+		position:absolute;
+		display:block;
+		width:45px;
+		height:4px;
+		left:50%;
+		border-radius:20px;
+		margin-left:(-45px/2);
+		background:rgb(246, 36, 89);
+		@include transition(top .2s);
+		@include transition(transform .2s);
+
+		&:nth-child(1){
+			top:23px;
+		}
+		&:nth-child(2){
+			top:38px;
+		}
+		&:nth-child(3){
+			top:38px;
+		}
+		&:nth-child(4){
+			top:53px;
+		}
+	}
+} 
+.switch3{
+	background:rgb(246, 36, 89);
+
+	span{
+		background:rgb(255, 255, 255);
+
+		&:nth-child(1){
+			top:38px;
+			width:0;
+		}
+		&:nth-child(2){
+			transform:rotate(45deg);
+		}
+		&:nth-child(3){
+			transform:rotate(-45deg);
+		}
+		&:nth-child(4){
+			top:38px;
+			width:0;
+		}
+	}
+}
+/* end */
+
+/* 利用<span>标签实现"汉堡形状"菜单按钮 */
+.hamberger-menu-icon4{
+	position:fixed;
+	top:20px;
+	left:320px;
+	width:80px;
+	height:80px;
+	cursor:pointer;
+	transition:.5s;
+
+	span{
+		position:absolute;
+		display:block;
+		width:(45px/2);
+		height:4px;
+		background:rgb(246, 36, 89);
+		@include transition(.2s);
+		@include transition(transform .2s);
+
+		&:nth-child(odd){
+			right:50%;
+			border-radius:20px 0 0 20px;
+		}
+		&:nth-child(even){
+			left:50%;
+			border-radius:0 20px 20px 0;
+		}
+		&:nth-child(1), &:nth-child(2){
+			top:23px;
+		}
+		&:nth-child(3), &:nth-child(4){
+			top:38px;
+		}
+		&:nth-child(5), &:nth-child(6){
+			top:53px;
+		}
+	}
+} 
+.switch4{
+	background:rgb(246, 36, 89);
+
+	span{
+		background:rgb(255, 255, 255);
+
+		&:nth-child(1), &:nth-child(6){
+			transform:rotate(45deg);
+		}
+		&:nth-child(2), &:nth-child(5){
+			transform:rotate(-45deg);
+		}
+		&:nth-child(1){
+			top:30px;
+			right:calc(50% - 3px);
+		}
+		&:nth-child(2){
+			top:30px;
+			left:calc(50% - 3px);
+		}
+		&:nth-child(3){
+			left:-50%;
+			opacity:0;
+		}
+		&:nth-child(4){
+			right:-50%;
+			opacity:0;
+		}
+		&:nth-child(5){
+			top:46px;
+			right:calc(50% - 3px);
+		}
+		&:nth-child(6){
+			top:46px;
+			left:calc(50% - 3px);
+		}
+	}
+}
+/* end */

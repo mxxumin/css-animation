@@ -6,15 +6,60 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class = "hamberger-menu-icon">
+
+    <div class = "number">
+    	<span>1</span>
+    	<span>2</span>
+    	<span>3</span>
+    	<span>4</span>
+    </div>
+    
+    <!-- 第一种方法：利用<span>以及伪类(:before,:after)实现"汉堡形状"菜单按钮 -->
+	<div class = "hamberger-menu-icon1">
 		<span></span>
 	</div>
+	<!-- end -->
+
+	<!-- 第二种方法：利用<span>标签实现"汉堡形状"菜单按钮 -->
+	<div class = "hamberger-menu-icon2">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<!-- end -->
+
+	<!-- 第三种方法：利用<span>标签实现"汉堡形状"菜单按钮 -->
+	<div class = "hamberger-menu-icon3">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<!-- end -->
+
+	<!-- 第四种方法：利用<span>标签实现"汉堡形状"菜单按钮 -->
+	<div class = "hamberger-menu-icon4">
+		<span></span><span></span>
+		<span></span><span></span>
+		<span></span><span></span>
+	</div>
+	<!-- end -->
+
 </body>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
     // 利用jQuery动态为class为hamberger-menu-icon的div添加switch类实现切换效果
-	$(".hamberger-menu-icon").click(function(){
-		$(this).toggleClass("switch")
+	$(".hamberger-menu-icon1").click(function(){
+		$(this).toggleClass("switch1")
+	})
+	$(".hamberger-menu-icon2").click(function(){
+		$(this).toggleClass("switch2")
+	})
+	$(".hamberger-menu-icon3").click(function(){
+		$(this).toggleClass("switch3")
+	})
+	$(".hamberger-menu-icon4").click(function(){
+		$(this).toggleClass("switch4")
 	})
 </script>
 </html>

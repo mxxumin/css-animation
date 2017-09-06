@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -6,24 +7,40 @@
 body {
   background: #f5d76e; }
 
-.hamberger-menu-icon {
+.number {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 420px;
+  height: 20px; }
+  .number span {
+    display: block;
+    padding: 0 40px 0 40px; }
+
+/* 利用<span>以及伪类(:before,:after)实现"汉堡形状"菜单按钮 */
+.hamberger-menu-icon1 {
   position: fixed;
   top: 20px;
   left: 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 80px;
   height: 80px;
-  cursor: pointer; }
-  .hamberger-menu-icon span {
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+  .hamberger-menu-icon1 span {
     position: relative;
     display: block;
     width: 45px;
     height: 4px;
     border-radius: 50px;
     background: #f62459; }
-    .hamberger-menu-icon span:before, .hamberger-menu-icon span:after {
+    .hamberger-menu-icon1 span:before, .hamberger-menu-icon1 span:after {
       content: "";
       position: absolute;
       display: block;
@@ -36,16 +53,16 @@ body {
       -ms-transition: top 0.2s 0.2s;
       -o-transition: top 0.2s 0.2s;
       transition: top 0.2s 0.2s; }
-    .hamberger-menu-icon span:before {
+    .hamberger-menu-icon1 span:before {
       top: -15px; }
-    .hamberger-menu-icon span:after {
+    .hamberger-menu-icon1 span:after {
       top: 15px; }
 
-.switch {
+.switch1 {
   background: #f62459; }
-  .switch span {
+  .switch1 span {
     background: #f62459; }
-    .switch span:before, .switch span:after {
+    .switch1 span:before, .switch1 span:after {
       top: 0;
       background: white;
       -webkit-transition: transform 0.2s 0.2s;
@@ -53,9 +70,179 @@ body {
       -ms-transition: transform 0.2s 0.2s;
       -o-transition: transform 0.2s 0.2s;
       transition: transform 0.2s 0.2s; }
-    .switch span:before {
+    .switch1 span:before {
       transform: rotate(45deg); }
-    .switch span:after {
+    .switch1 span:after {
       transform: rotate(-45deg); }
+
+/* end */
+/* 利用<span>标签实现"汉堡形状"菜单按钮 */
+.hamberger-menu-icon2 {
+  position: fixed;
+  top: 20px;
+  left: 120px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: .5s; }
+  .hamberger-menu-icon2 span {
+    position: absolute;
+    display: block;
+    width: 45px;
+    height: 4px;
+    left: 50%;
+    border-radius: 20px;
+    margin-left: -22.5px;
+    background: #f62459;
+    -webkit-transition: top 0.2s;
+    -moz-transition: top 0.2s;
+    -ms-transition: top 0.2s;
+    -o-transition: top 0.2s;
+    transition: top 0.2s;
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s; }
+    .hamberger-menu-icon2 span:nth-child(1) {
+      top: 23px; }
+    .hamberger-menu-icon2 span:nth-child(2) {
+      top: 38px; }
+    .hamberger-menu-icon2 span:nth-child(3) {
+      top: 53px; }
+
+.switch2 {
+  background: #f62459; }
+  .switch2 span {
+    background: white; }
+    .switch2 span:nth-child(1) {
+      top: 38px;
+      transform: rotate(45deg); }
+    .switch2 span:nth-child(2) {
+      opacity: 0; }
+    .switch2 span:nth-child(3) {
+      top: 38px;
+      transform: rotate(-45deg); }
+
+/* end */
+/* 利用<span>标签实现"汉堡形状"菜单按钮 */
+.hamberger-menu-icon3 {
+  position: fixed;
+  top: 20px;
+  left: 220px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: .5s; }
+  .hamberger-menu-icon3 span {
+    position: absolute;
+    display: block;
+    width: 45px;
+    height: 4px;
+    left: 50%;
+    border-radius: 20px;
+    margin-left: -22.5px;
+    background: #f62459;
+    -webkit-transition: top 0.2s;
+    -moz-transition: top 0.2s;
+    -ms-transition: top 0.2s;
+    -o-transition: top 0.2s;
+    transition: top 0.2s;
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s; }
+    .hamberger-menu-icon3 span:nth-child(1) {
+      top: 23px; }
+    .hamberger-menu-icon3 span:nth-child(2) {
+      top: 38px; }
+    .hamberger-menu-icon3 span:nth-child(3) {
+      top: 38px; }
+    .hamberger-menu-icon3 span:nth-child(4) {
+      top: 53px; }
+
+.switch3 {
+  background: #f62459; }
+  .switch3 span {
+    background: white; }
+    .switch3 span:nth-child(1) {
+      top: 38px;
+      width: 0; }
+    .switch3 span:nth-child(2) {
+      transform: rotate(45deg); }
+    .switch3 span:nth-child(3) {
+      transform: rotate(-45deg); }
+    .switch3 span:nth-child(4) {
+      top: 38px;
+      width: 0; }
+
+/* end */
+/* 利用<span>标签实现"汉堡形状"菜单按钮 */
+.hamberger-menu-icon4 {
+  position: fixed;
+  top: 20px;
+  left: 320px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: .5s; }
+  .hamberger-menu-icon4 span {
+    position: absolute;
+    display: block;
+    width: 22.5px;
+    height: 4px;
+    background: #f62459;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s; }
+    .hamberger-menu-icon4 span:nth-child(odd) {
+      right: 50%;
+      border-radius: 20px 0 0 20px; }
+    .hamberger-menu-icon4 span:nth-child(even) {
+      left: 50%;
+      border-radius: 0 20px 20px 0; }
+    .hamberger-menu-icon4 span:nth-child(1), .hamberger-menu-icon4 span:nth-child(2) {
+      top: 23px; }
+    .hamberger-menu-icon4 span:nth-child(3), .hamberger-menu-icon4 span:nth-child(4) {
+      top: 38px; }
+    .hamberger-menu-icon4 span:nth-child(5), .hamberger-menu-icon4 span:nth-child(6) {
+      top: 53px; }
+
+.switch4 {
+  background: #f62459; }
+  .switch4 span {
+    background: white; }
+    .switch4 span:nth-child(1), .switch4 span:nth-child(6) {
+      transform: rotate(45deg); }
+    .switch4 span:nth-child(2), .switch4 span:nth-child(5) {
+      transform: rotate(-45deg); }
+    .switch4 span:nth-child(1) {
+      top: 30px;
+      right: calc(50% - 3px); }
+    .switch4 span:nth-child(2) {
+      top: 30px;
+      left: calc(50% - 3px); }
+    .switch4 span:nth-child(3) {
+      left: -50%;
+      opacity: 0; }
+    .switch4 span:nth-child(4) {
+      right: -50%;
+      opacity: 0; }
+    .switch4 span:nth-child(5) {
+      top: 46px;
+      right: calc(50% - 3px); }
+    .switch4 span:nth-child(6) {
+      top: 46px;
+      left: calc(50% - 3px); }
+
+/* end */
 
 /*# sourceMappingURL=style.css.map */
