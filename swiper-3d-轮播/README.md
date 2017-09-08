@@ -9,10 +9,9 @@
 ![](img/lunbo.gif)
 ***
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/hambergur%20menu%20icon/index.html):point_left:
+`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/swiper-3d-%E8%BD%AE%E6%92%AD/index.html):point_left:
 
 ### swiper插件中coverflow效果配制参数说明：
-
 ***
 * effect:
 * slidesPerView:
@@ -24,10 +23,9 @@
 * slideShawdows:
 
 ### 需要注意的坑：
+***
 * slidesPerView
 * slideShawdows
-
-***
 
 ***
 * 实现代码见`index.html`文件
