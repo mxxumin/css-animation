@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: #1b1b1e; }
+  .swiper .swiper-container {
+    width: 600px;
+    height: 502px; }
+    .swiper .swiper-container .swiper-wrapper {
+      width: 600px;
+      height: 502px; }
+      .swiper .swiper-container .swiper-wrapper .swiper-slide img {
+        width: 336px;
+        height: 502px; }
+
+/*# sourceMappingURL=style.css.map */

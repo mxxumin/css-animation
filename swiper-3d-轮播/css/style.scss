@@ -1,0 +1,32 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+html, body{
+	width:100%;
+	height:100%;
+}
+.swiper{
+	width:100%;
+	height:100%;
+	background:rgb(27, 27, 30);
+
+	.swiper-container{
+		width:600px;
+		height:502px;
+
+		.swiper-wrapper{
+			width:600px;
+			height:502px;
+
+			.swiper-slide{
+
+				img{
+					width:336px;
+					height:502px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>利用swiper实现3d轮播图</title>
+
+	<!-- 引入swiper插件的默认样式 -->
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+
+	<!-- 引入自己需要的样式 -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="swiper">
+
+	    <!-- 使用swiper插件的html结构 -->
+		<div class="swiper-container">
+
+		    <!-- 轮播图容器 -->
+			<div class="swiper-wrapper">
+
+			    <!-- 轮播图 -->
+				<div class="swiper-slide"><img src="img/1.jpg" alt="picture" /></div>
+				<div class="swiper-slide"><img src="img/2.jpg" alt="picture" /></div>
+				<div class="swiper-slide"><img src="img/3.jpg" alt="picture" /></div>
+				<div class="swiper-slide"><img src="img/4.jpg" alt="picture" /></div>
+				<div class="swiper-slide"><img src="img/5.jpg" alt="picture" /></div>
+
+			</div>
+
+			<!-- 左右按钮 -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+
+		</div>
+		<!-- end -->
+
+	</div>
+
+	<!-- 引入swiper的js文件 -->
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	
+	<!-- 引入实现3d轮播图效果的就js配置 -->
+	<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>
