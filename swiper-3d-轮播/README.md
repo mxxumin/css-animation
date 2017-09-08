@@ -24,7 +24,23 @@
 
 ### 需要注意的坑：
 ***
-* slidesPerView
+* slidesPerView与swiper-container的宽度是相关的。swiper-container的宽度除以slidesPerView的数值，得到的就是每个swiper-slide的宽度。
+ - 当swiper-slide的宽度小于其子标签img的宽度的时候，会导致img标签的图像在页面显示的时候不居中，这个时候就需要利用css的技巧使得img图像居中显示。做法：
+ ```
+ .swiper-slide{
+    position:relative;
+    ...
+ } 
+ .swiper-slide img{
+    position:absolute;
+    top:...;
+    left:50%;
+    width:...;
+    height:...;
+    margin-left:-width/2;
+    ....
+ }
+ ```
 * slideShawdows
 
 ***
