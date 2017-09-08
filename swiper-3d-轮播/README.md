@@ -41,6 +41,13 @@
     ....
  }
  ```
+ - 当swiper-slide的宽度等于其子标签img的宽度的时候，img图像在页面中就会居中显示。
+ - 当swiper-slide的宽度大于其子标签img的宽度的时候，img图像在页面中不会居中显示，同样可以利用css来实现图像居中显示。做法：
+ ```
+ .swiper-slide{
+    text-align:center;
+ }
+ ```
 * slideShawdows
 
 ***
