@@ -1,4 +1,4 @@
-/* 平行四边形导航条 */
+ 平行四边形导航条 */
 .ping-xing-si-bian-xing ul{
 	list-style:none;
 }
@@ -7,6 +7,7 @@
 	display:inline-block;
 	padding:5px 10px;
 	color:#fff;
+	cursor:pointer;
 }
 .ping-xing-si-bian-xing ul li::after{
 	content:"";
@@ -16,6 +17,7 @@
 	bottom:0;
 	left:0;
 	z-index:-1;
+	overflow:hidden;
 	border-radius:3px;
 	background:#F64747;
 	-webkit-transform:skew(-25deg, 0);
@@ -23,6 +25,11 @@
 	    -ms-transform:skew(-25deg, 0);
 	     -o-transform:skew(-25deg, 0);
 	        transform:skew(-25deg, 0);
+	-webkit-transition:all .4s ease;
+	   -moz-transition:all .4s ease;
+	    -ms-transition:all .4s ease;
+	     -o-transition:all .4s ease;
+	        transition:all .4s ease;
 }
 .ping-xing-si-bian-xing ul li:hover::after{
 	background:#4183D7;
@@ -51,6 +58,7 @@
 	bottom:0;
 	left:0;
 	z-index:-2;
+	overflow:hidden;
 	border:1px solid #67809F;
 	border-radius:3px;
 	color:#fff;
@@ -58,6 +66,7 @@
 	transform:perspective(.5em) rotateX(2deg);
 	transform-origin:bottom;
 }
+/* 利用js动态添加z-index类，使得鼠标点击li时，被点击的li突出 */
 .ti-xing ul .z-index::after{
 	z-index:-1;
 	background:#4183D7;
@@ -75,4 +84,4 @@
 	color:#fff;
 	background:#F64747;
 }
-/* end */
+/* end 
