@@ -1,0 +1,78 @@
+/* 平行四边形导航条 */
+.ping-xing-si-bian-xing ul{
+	list-style:none;
+}
+.ping-xing-si-bian-xing ul li{
+	position:relative;
+	display:inline-block;
+	padding:5px 10px;
+	color:#fff;
+}
+.ping-xing-si-bian-xing ul li::after{
+	content:"";
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:-1;
+	border-radius:3px;
+	background:#F64747;
+	-webkit-transform:skew(-25deg, 0);
+	   -moz-transform:skew(-25deg, 0);
+	    -ms-transform:skew(-25deg, 0);
+	     -o-transform:skew(-25deg, 0);
+	        transform:skew(-25deg, 0);
+}
+.ping-xing-si-bian-xing ul li:hover::after{
+	background:#4183D7;
+}
+/* end */
+
+/* 梯形导航条 */
+.ti-xing ul{
+	list-style:none;
+}
+.ti-xing ul li{
+	position:relative;
+	display:inline-block;
+	box-sizing:border-box;
+	width:205px;
+	height:35px;
+	padding:8px 20px;
+	margin-left:-15px;
+	color:#fff;
+}
+.ti-xing ul li::after{
+	content:"";
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:-2;
+	border:1px solid #67809F;
+	border-radius:3px;
+	color:#fff;
+	background:#F64747;
+	transform:perspective(.5em) rotateX(2deg);
+	transform-origin:bottom;
+}
+.ti-xing ul .z-index::after{
+	z-index:-1;
+	background:#4183D7;
+}
+/* end */
+
+/* 毛玻璃效果 */
+.mao-bo-li ul{
+	list-style:none;
+}
+.mao-bo-li ul li{
+	position:relative;
+	display:inline-block;
+	padding:5px 10px;
+	color:#fff;
+	background:#F64747;
+}
+/* end */
