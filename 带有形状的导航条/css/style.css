@@ -63,8 +63,16 @@
 	border-radius:3px;
 	color:#fff;
 	background:#F64747;
-	transform:perspective(.5em) rotateX(2deg);
-	transform-origin:bottom;
+	-webkit-transform:perspective(.5em) rotateX(2deg);
+	   -moz-transform:perspective(.5em) rotateX(2deg);
+	    -ms-transform:perspective(.5em) rotateX(2deg);
+	     -o-transform:perspective(.5em) rotateX(2deg);
+	        transform:perspective(.5em) rotateX(2deg);
+	-webkit-transform-origin:bottom;
+	   -moz-transform-origin:bottom;
+	    -ms-transform-origin:bottom;
+	     -o-transform-origin:bottom;
+	        transform-origin:bottom;
 }
 /* 利用js动态添加z-index类，使得鼠标点击li时，被点击的li突出 */
 .ti-xing ul .z-index::after{
@@ -72,16 +80,3 @@
 	background:#4183D7;
 }
 /* end */
-
-/* 毛玻璃效果 */
-.mao-bo-li ul{
-	list-style:none;
-}
-.mao-bo-li ul li{
-	position:relative;
-	display:inline-block;
-	padding:5px 10px;
-	color:#fff;
-	background:#F64747;
-}
-/* end 
