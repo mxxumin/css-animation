@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>旋转门效果</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.container{
+			width:960px;
+			height:400px;
+			padding:0 30px;
+			margin:50px auto;
+			background:#22A7F0;
+		}
+		.rotate-container{
+			float:left;
+			width:260px;
+			height:333px;
+			margin:30px;
+			cursor:pointer;
+		}
+		.rotate-item{
+			position:relative;
+			-webkit-perspective:1200px; /*设置视角*/
+			   -moz-perspective:1200px;
+			    -ms-perspective:1200px;
+			     -o-perspective:1200px;
+			        perspective:1200px;
+			transition:0.6s;
+		}
+		.front, .back{
+			position:absolute;
+			top:0;
+			left:0;
+			width:260px;
+			height:333px;
+			-webkit-transform-style:preserve-3d; /*为要变换的元素设置3d空间*/
+			   -moz-transform-style:preserve-3d;
+			    -ms-transform-style:preserve-3d;
+			     -o-transform-style:preserve-3d;
+			        transform-style:preserve-3d;
+			transition:.6s;
+		}
+		.front{
+			z-index:2;
+		    transform:rotateY(0deg);
+		    backface-visibility:hidden; /*设置元素旋转后背向屏幕时为不可见*/
+		}
+		.back{
+			z-index:1;
+			transform:rotateY(-180deg); /*为了让前、后面元素在旋转中更加衔接*/
+			backface-visibility:hidden; /*设置元素旋转后背向屏幕时为不可见*/
+		}
+		/*设置不同前、后元素的背景图*/
+		.front.item1{
+			background:url(img/1-1.png) center center no-repeat;
+			background-size:100% auto;
+		}
+		.back.item1{
+			background:url(img/1-2.png) center center no-repeat;
+			background-size:100% auto;
+		}
+		.front.item2{
+			background:url(img/2-1.png) center center no-repeat;
+			background-size:100% auto;
+		}
+		.back.item2{
+			background:url(img/2-2.png) center center no-repeat;
+			background-size:100% auto;
+		}
+		.front.item3{
+			background:url(img/3-1.png) center center no-repeat;
+			background-size:100% auto;
+		}
+		.back.item3{
+			background:url(img/3-2.png) center center no-repeat;
+			background-size:100% auto;
+		}
+		/*当鼠标hover上去的时候，进行旋转*/
+		.rotate-container:hover .front{
+			-webkit-transform:rotateY(180deg); /*前面元素由0deg旋转到180deg*/
+		}
+		.rotate-container:hover .back{
+			-webkit-transform:rotateY(0deg); /*后面元素由-180deg旋转到0deg*/
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+
+        <div class="rotate-container">
+			<div class="rotate-item">
+				<div class="front item1"></div>
+				<div class="back item1"></div>
+			</div>
+        </div>
+        
+        <div class="rotate-container">
+			<div class="rotate-item">
+				<div class="front item2"></div>
+				<div class="back item2"></div>
+			</div>
+        </div>
+
+        <div class="rotate-container">
+			<div class="rotate-item">
+				<div class="front item3"></div>
+				<div class="back item3"></div>
+			</div>
+        </div>
+
+	</div>
+</body>
+</html>
