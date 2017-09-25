@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片下面带描述文字效果</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.polaroid{
+			width:50%;       /*让图片带有响应式效果*/
+			margin:50px auto;
+			background:#FFFFFF;
+			box-shadow:0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+		}
+        .polaroid img{
+        	width:100%;
+        }
+        .text{
+        	padding:10px 20px;
+        	text-align:center;
+        }
+	</style>
+</head>
+<body>
+	<div class="polaroid">       <!-- 容器 -->
+		<img src="../img/lights600x400.jpg" alt="lights">  <!-- 图片 -->
+		<div class="text">       <!-- 用于描述图片的文字 -->
+			<p>Northern Lights in Norway</p>
+		</div>
+	</div>
+</body>
+</html>

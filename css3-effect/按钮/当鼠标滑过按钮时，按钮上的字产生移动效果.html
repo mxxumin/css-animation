@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>button</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.button{
+			width:200px;
+			padding:20px;
+			border:none;
+			border-radius:10px;
+			margin:5px;
+			font-size:28px;
+			color:#fff;
+			background:#FB5252;
+			cursor:pointer;
+		}
+		.button span{
+			position:relative;
+			transition:.5s;
+		}
+		.button span:after{
+			content:"\00bb";
+			position:absolute;
+			top:0;
+			right:-20px;
+			opacity:0;
+			transition:.5s;
+		}
+		.button:hover span{
+			padding-right:25px;
+		}
+		.button:hover span:after{
+			opacity:1;
+			right:0;
+		}
+	</style>
+</head>
+<body>
+	<!-- 当鼠标滑过按钮时，按钮上的字产生移动效果 -->
+	<button class="button"><span>click me</span></button>
+</body>
+</html>

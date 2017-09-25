@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鼠标滑过图片时出现文字，文字出现时图片隐藏的效果</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.container{
+			position:relative;
+			width:25%;
+			margin:20px;
+		}
+		.container img{
+			display:block;
+			width:100%;
+			height:auto;
+		}
+		.overlay{
+			position:absolute;
+			top:0;
+			right:0;
+			width:0;
+			height:100%;
+			overflow:hidden;
+			background:#008CBA;
+			transition: .5s ease; /*让opacity的变化更柔和一点*/
+		}
+		.overlay .text{
+			position:absolute;
+			top:50%;
+			left:50%;
+			font-size:20px;
+			color:#fff;
+			transform:translate(-50%,-50%);/*让文字水平垂直居中*/
+			white-space:nowrap; /*让文字不换行显示*/
+		}
+		.container:hover .overlay{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<!-- 第一种效果，fade in text -->
+	<div class="container">
+		<img src="../img/img_avatar.png">
+		<div class="overlay">
+			<div class="text">hello world</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片的边框效果</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		img{
+			width:400px;
+			height:300px;
+			padding:10px;
+			border:1px solid #958E8E;
+			border-radius:8px;
+		}
+		img:hover{
+			box-shadow:0 0 4px 4px rgba(88, 152, 246, .5);
+		}
+		/*这种方法可以直接为图片设置边框效果和内边距效果，不需要额外的父元素div*/
+	</style>
+</head>
+<body>
+	<a href="#">
+		<img src="../img/paris.jpg" alt="paris">
+	</a>
+</body>
+</html>

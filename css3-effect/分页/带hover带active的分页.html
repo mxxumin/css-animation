@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>带hover带active的分页</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.pagination a{
+			float:left;      /*浮动可以消除a元素之间因换行而产生的空间*/
+			padding:8px 16px;/*利用padding可以将页码数字之间分开，页码框的宽高就是有字体的宽高加上padding，这种方法的好处是不用设置宽高，坏处是当a标签中的文字长度不一样时会造成页码框的宽度不一致*/
+			font-size:24px;
+			text-decoration:none;
+			color:#000;
+			transition:.5s; /*让页码框背景颜色变化柔和*/
+		}
+		.active{
+			color:#fff;
+			background:#FC3838;
+			border-color:#FC3838;
+		}
+		.pagination a:hover:not(.active){/*为除了类为active的页码之外的其他页码添加当鼠标经过页码时出现背景颜色的效果*/
+			background:#818181;
+			border-color:#818181;
+		}
+	</style>
+</head>
+<body>
+	<div class="pagination">
+		<a href="">&laquo;</a>
+		<a href="">1</a>
+		<a class="active" href="">2</a>
+		<a href="">3</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">&raquo;</a>
+	</div>
+</body>
+</html>

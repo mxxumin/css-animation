@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鼠标滑过图片时出现文字，文字出现时图片隐藏的效果</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.container{
+			position:relative;
+			width:25%;
+			margin:20px;
+		}
+		.container img{
+			display:block;
+			width:100%;
+			height:auto;
+			opacity:1;
+			transition: .5s ease; /*让opacity的变化更柔和一点*/
+		}
+		.box{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);/*让显示文字的框水平垂直居中*/
+			opacity:0;
+			transition: .5s ease; /*让opacity的变化更柔和一点*/
+		}
+		.box .text{
+			padding:16px 32px;
+			font-size:16px;
+			color:#fff;
+			background:#4CAF50;
+		}
+		.container:hover .box{
+			opacity:1;
+		}
+		.container:hover img{
+			opacity:.3;
+		}
+	</style>
+</head>
+<body>
+	<!-- 第一种效果，fade in text -->
+	<div class="container">
+		<img src="../img/img_avatar.png">
+		<div class="box">
+			<div class="text">john</div>
+		</div>
+	</div>
+</body>
+</html>

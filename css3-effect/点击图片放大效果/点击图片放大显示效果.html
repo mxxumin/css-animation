@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>点击图片放大显示效果(模态框效果)</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+	    /*小图片的样式*/
+		.Img{
+			width:25%;
+			height:auto;
+			border-radius:8px;
+			cursor:pointer;
+		}
+		.Img:hover{
+			opacity:.5;
+		}
+		/*模态框的背景设置*/
+		.modal{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:1;
+			display:none;
+			width:100%;
+			height:100%;
+			padding-top:100px;
+			background:rgba(0, 0, 0, .9);
+		}
+		/*模态框中图片的样式*/
+		.modalImg{
+			display:block;
+			width:50%;
+			max-width:700px;
+			margin:auto;
+		}
+		/*模态框中文字的样式*/
+		.caption{
+			display:block;
+			width:50%;
+			max-width:700px;
+			height:150px;
+			padding:10px 0;
+			margin:auto;
+			font-size:20px;
+			text-align:center;
+			color:#fff;
+		}
+		/*为模态框中的图片和文字添加放大动画效果*/
+		.modalImg, .caption{
+			animation:zoom .6s ease;
+		}
+		/*动画声明*/
+		@keyframes zoom{
+			from { transform:scale(0); }
+			to { transform:scale(1); }
+		}
+		/*关闭按钮样式*/
+		.close{
+			position:absolute;
+			top:15px;
+			right:35px;
+			font-size:40px;
+			font-weight:bold;
+			color:#f1f1f1;
+		}
+		.close:hover,.close:focus{
+			color:.close;
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body>
+    <img class="Img" id="Img" src="../img/img_lights.jpg" alt="Northern Lights, Norway">
+
+    <!-- 模态框(刚开始需要隐藏，当点击图片的时候才显示) -->
+	<div class="modal" id="modal">
+		<span class="close" id="close">×</span>
+		<img class="modalImg" id="modalImg">
+		<div class="caption" id="caption"></div>
+	</div>
+
+	<!-- 利用javascript来显示“模态框”的内容 -->
+	<script type="text/javascript">
+	    // 获取模态框、模态框中的图片、模态框中的文字
+		var modal = document.getElementById("modal"),
+		    modalImg = document.getElementById("modalImg"),
+		    caption = document.getElementById("caption");
+		// 获取小图片
+		var Img = document.getElementById("Img");
+		// 为小图片添加点击事件，点击小图片的时候，显示模态框并为模态框中的图片添加src属性，将小图片中的alt内容赋给模态框中的文字内容
+		Img.onclick = function(){
+			modal.style.display = "block";
+			modalImg.src = Img.src;
+			caption.innerText = Img.alt;
+		}
+        // 获取关闭按钮
+        var close = document.getElementById("close");
+        // 为关闭按钮添加点击事件，点击关闭按钮的时候让模态框消失
+        close.onclick = function(){
+        	modal.style.display = "none";
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片上加文字效果</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.container{
+			position:relative;
+		}
+		.container img{
+			width:100%;     
+			/*将图片大小设置为100%很关键。将图片的宽度设置成100%,图片的宽高会撑开父元素的宽高，改变浏览器窗口的大小，图片的大小和父元素container的大小也会随之改变*/
+			height:auto;
+			opacity:.5;
+			filter:alpha(opacity = 50);
+		}
+		.container .text{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			/*translate平移值为百分比时，是相对该元素的宽高，对于本列情况，translate的百分比就是相对.text的div的宽高。利用这种方法也可以实现元素的水平和垂直居中，该方法类似于position:absolute; top:50%; left:50%; margin-top:-元素高度/2; margin-left:-元素的宽度/2;的方法*/
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="../img/trolltunga.jpg" >
+		<div class="text">center</div>
+	</div>
+</body>
+</html>

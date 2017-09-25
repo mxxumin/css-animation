@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>当点击按钮时，按钮产生按压效果</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.button{
+			width:200px;
+			padding:20px;
+			border:none;
+			border-radius:10px;
+			outline:none;   /*点击按钮的时候，去掉按钮周围的轮廓线*/
+			font-size:28px;
+			color:#fff;
+			background:#FA6262;
+			box-shadow:0 15px #999;
+			cursor:pointer;
+		}
+		.button:hover{
+			background:#FA3434;
+		}
+		.button:active{
+			box-shadow:0 10px #999;
+			transform:translateY(5px);
+		}
+	</style>
+</head>
+<body>
+	<button class="button">click me</button>
+</body>
+</html>
