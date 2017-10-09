@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.stage{
+			position:relative;
+			width:1200px;
+			height:600px;
+			margin:50px auto;
+			background:#F66060;
+			-webkit-perspective:8000px;
+			   -moz-perspective:8000px;
+			    -ms-perspective:8000px;
+			     -o-perspective:8000px;
+			        perspective:8000px;
+		}
+        .container{
+        	position:absolute;
+        	top:50%;
+        	left:50%;
+        	width:320px;
+        	height:240px;
+        	margin-top:-120px;
+        	margin-left:-160px;
+        	-webkit-transform-style:preserve-3d;
+        	   -moz-transform-style:preserve-3d;
+        	    -ms-transform-style:preserve-3d;
+        	     -o-transform-style:preserve-3d;
+        	        transform-style:preserve-3d;
+        }
+        .container img{
+        	position:absolute;
+        	width:100%;
+        	height:100%;
+        }
+        .container img:nth-child(1){
+        	-webkit-transform:rotateY(0deg) translateZ(427px);
+        	   -moz-transform:rotateY(0deg) translateZ(427px);
+        	    -ms-transform:rotateY(0deg) translateZ(427px);
+        	     -o-transform:rotateY(0deg) translateZ(427px);
+        	        transform:rotateY(0deg) translateZ(427px);
+        }
+        .container img:nth-child(2){
+        	-webkit-transform:rotateY(45deg) translateZ(427px);
+        	   -moz-transform:rotateY(45deg) translateZ(427px);
+        	    -ms-transform:rotateY(45deg) translateZ(427px);
+        	     -o-transform:rotateY(45deg) translateZ(427px);
+        	        transform:rotateY(45deg) translateZ(427px);
+        }
+        .container img:nth-child(3){
+        	-webkit-transform:rotateY(90deg) translateZ(427px);
+        	   -moz-transform:rotateY(90deg) translateZ(427px);
+        	    -ms-transform:rotateY(90deg) translateZ(427px);
+        	     -o-transform:rotateY(90deg) translateZ(427px);
+        	        transform:rotateY(90deg) translateZ(427px);
+        }
+        .container img:nth-child(4){
+        	-webkit-transform:rotateY(135deg) translateZ(427px);
+        	   -moz-transform:rotateY(135deg) translateZ(427px);
+        	    -ms-transform:rotateY(135deg) translateZ(427px);
+        	     -o-transform:rotateY(135deg) translateZ(427px);
+        	        transform:rotateY(135deg) translateZ(427px);
+        }
+        .container img:nth-child(5){
+        	-webkit-transform:rotateY(180deg) translateZ(427px);
+        	   -moz-transform:rotateY(180deg) translateZ(427px);
+        	    -ms-transform:rotateY(180deg) translateZ(427px);
+        	     -o-transform:rotateY(180deg) translateZ(427px);
+        	        transform:rotateY(180deg) translateZ(427px);
+        }
+        .container img:nth-child(6){
+        	-webkit-transform:rotateY(225deg) translateZ(427px);
+        	   -moz-transform:rotateY(225deg) translateZ(427px);
+        	    -ms-transform:rotateY(225deg) translateZ(427px);
+        	     -o-transform:rotateY(225deg) translateZ(427px);
+        	        transform:rotateY(225deg) translateZ(427px);
+        }
+        .container img:nth-child(7){
+        	-webkit-transform:rotateY(270deg) translateZ(427px);
+        	   -moz-transform:rotateY(270deg) translateZ(427px);
+        	    -ms-transform:rotateY(270deg) translateZ(427px);
+        	     -o-transform:rotateY(270deg) translateZ(427px);
+        	        transform:rotateY(270deg) translateZ(427px);
+        }
+        .container img:nth-child(8){
+        	-webkit-transform:rotateY(315deg) translateZ(427px);
+        	   -moz-transform:rotateY(315deg) translateZ(427px);
+        	    -ms-transform:rotateY(315deg) translateZ(427px);
+        	     -o-transform:rotateY(315deg) translateZ(427px);
+        	        transform:rotateY(315deg) translateZ(427px);
+        }
+	</style>
+</head>
+<body>
+	<div class="stage">
+		<div class="container" id="container">
+			<img src="img/banner1-1.jpg" alt="">
+			<img src="img/banner1-2.jpg" alt="">
+			<img src="img/banner1-3.jpg" alt="">
+			<img src="img/banner1-4.jpg" alt="">
+			<img src="img/banner1-1.jpg" alt="">
+			<img src="img/banner1-2.jpg" alt="">
+			<img src="img/banner1-3.jpg" alt="">
+			<img src="img/banner1-4.jpg" alt="">
+		</div>
+	</div>
+	<script type="text/javascript">
+		var container = document.getElementById("container"),
+		    imgWidth = container.offsetWidth,
+		    imgs = container.getElementsByTagName("img"),
+		    len = imgs.length,
+		    angle = 360/len,
+		    index = 0,
+		    timer = null,
+		    tZ = (imgWidth/2) / Math.tan(angle/2/180*Math.PI);
+		console.log(angle );
+
+		
+		// 让图片自动播放
+		function autoPlay(){
+			stopPlay();
+			timer = setInterval(function(){
+				container.style.transform = "rotateY("+(-1*angle* ++index)+"deg)";
+				container.style.transition = "transform .6s ease-in-out"
+			},3000)
+		}
+
+		autoPlay();
+
+		// 停止播放
+        function stopPlay(){
+        	if(timer){
+        		clearInterval(timer);
+        	}
+        }
+
+		// 当鼠标滑入的时候，自动播放停止
+        container.onmouseover = function(){
+        	stopPlay();
+        }
+
+        // 当鼠标滑出的时候，继续自动播放
+        container.onmouseout = function(){
+        	autoPlay();
+        }
+
+		// 点击图片进行切换
+		container.onclick = function(){
+			this.style.transform = "rotateY("+(-1*angle* ++index)+"deg)";
+            if(index > len){
+            	index = 0;
+            }
+			console.log(index);
+		}
+	</script>
+</body>
+</html>

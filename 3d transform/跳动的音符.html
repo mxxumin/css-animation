@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>跳动的音符</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		.stage{
+			position:relative;
+			width:100%;
+			height:400px;
+			margin:100px auto;
+			background:#979292;
+		}
+		.music{
+			position:absolute;
+			top:50%;
+			left:50%;
+			width:144px;
+			height:104px;
+			margin-top:-52px;
+			margin-left:-72px;
+			-webkit-transform:rotate(180deg);/*旋转180度是因为元素高度的变化方向都是向下的，所以旋转180度后高度就是向上变化*/
+			        transform:rotate(180deg);
+		}
+		.line{
+			float:left;
+			width:20px;
+			height:100px;
+			margin:2px;
+			/*background:#7DF484;*/
+			background:-webkit-radial-gradient(circle, #A7FCAC, #44FA6C);
+			background:radial-gradient(circle, #A7FCAC, #44FA6C);/*让音符的颜色实现渐变*/
+		}
+		/*音符跳动本质就是通过改变每个音符的高度并控制高度变化的时间来达到这种跳动的效果*/
+		.line1{
+			animation:jump 1s infinite;
+		}
+		.line2{
+			animation:jump .7s infinite;
+		}
+		.line3{
+			animation:jump .3s infinite;
+		}
+		.line4{
+			animation:jump .5s infinite;
+		}
+		.line5{
+			animation:jump .7s infinite;
+		}
+		.line6{
+			animation:jump 1s infinite;
+		}
+		@keyframes jump{
+			0%{height:20%;}
+			25%{height:40%;}
+			50%{height:60%;}
+			75%{height:80%;}
+			100%{height:100%;}
+		}
+	</style>
+</head>
+<body>
+	<div class="stage">
+		<div class="music">
+			<div class="line line1"></div>
+			<div class="line line2"></div>
+			<div class="line line3"></div>
+			<div class="line line4"></div>
+			<div class="line line5"></div>
+			<div class="line line6"></div>
+		</div>
+	</div>
+</body>
+</html>
