@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>扫描二维码</title>
+	<style>
+	    .qrcode{
+	    	position:relative;
+	    	width:150px;
+	    	height:150px;
+	    	padding:10px;
+	    	background:pink;
+	    }
+	    .scan{
+	    	position:absolute;
+	    	top:10px;
+	    	left:0;
+	    	right:0;
+	    	display:block;
+	    	width:150px;
+	    	height:3px;
+	    	margin:auto;
+	    	background:url(img/scan.png) center center no-repeat;
+	    	background-size:contain;
+	    	animation:scan 1.5s linear alternate infinite;
+	    }
+		img{
+			width:150px;
+			height:150px;
+		}
+		@keyframes scan{
+			0%{
+				transform:translateY(0px);
+			}
+			100%{
+				transform:translateY(150px);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="qrcode">
+		<span class="scan"></span>
+		<img src="img/qrcode.png" alt="扫一扫">
+	</div>
+</body>
+</html>
