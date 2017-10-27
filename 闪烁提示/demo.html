@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闪烁提示</title>
+	<style>
+	    body{
+	    	background:pink;
+	    }
+		.twinkling{
+			width:56px;
+			height:90px;
+			margin:50px auto;
+			background:url(img/down.png) center center no-repeat;
+			background:contain;
+			animation:twinkling 3s ease infinite;
+		}
+		@keyframes twinkling{
+			0%{
+				opacity:0;
+				transform:translateY(0);
+			}
+			50%{
+				opacity:1;
+				transform:translateY(20px);
+			}
+			100%{
+				opacity:0;
+				transform:translateY(0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="twinkling"></div>
+</body>
+</html>
