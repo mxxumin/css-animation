@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+        html,body{
+        	height: 100%;
+        	width: 100%;
+        	margin: 0;
+        	overflow: hidden;
+        }
+        .bg{
+        	position: absolute;
+        	width: 100%;
+        	height: 100%;
+        	left: 0;
+        	top: 0;
+        	background: url(header-bg.png) no-repeat center center/cover;
+        	-webkit-transform: scale(2);
+            -ms-transform: scale(2);
+            -o-transform: scale(2);
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+
+	<div class="bg" style="left: 0px; top: 0px;"></div>
+	<script>
+        window.addEventListener('deviceorientation', handleOrientation, false);
+        var bgDom = document.querySelector('.bg');
+        function handleOrientation(event) {
+            var x = event.beta;  // 范围是[-180, 180]
+            var y = event.gamma;  // 范围是[-90, 90]
+            
+            // 这里我们把x的数值控制在-90到90，因为我们不需要让设备翻转倒过来。
+            if (x > 90) {x = 90};
+            if (x < -90) {x = -90};
+            
+            // 设置偏移最大值
+            var max = 100;
+            bgDom.style.cssText = 'left: ' + y/90*max + 'px; top: ' + x/90*max + 'px';
+        }
+    </script>
+</body>
+</html>
