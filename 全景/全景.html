@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<style>
+   
         html,body{
         	height: 100%;
         	width: 100%;
@@ -17,16 +19,14 @@
         	left: 0;
         	top: 0;
         	background: url(header-bg.png) no-repeat center center/cover;
-        	-webkit-transform: scale(2);
-            -ms-transform: scale(2);
-            -o-transform: scale(2);
-            transform: scale(2);
+            transform:scale(2);
         }
     </style>
 </head>
 <body>
 
-	<div class="bg" style="left: 0px; top: 0px;"></div>
+	<div class="bg"></div>
+    <script src="https://nie.res.netease.com/comm/js/zepto(mixNIE).last.js"></script>
 	<script>
         window.addEventListener('deviceorientation', handleOrientation, false);
         var bgDom = document.querySelector('.bg');
@@ -39,9 +39,31 @@
             if (x < -90) {x = -90};
             
             // 设置偏移最大值
-            var max = 100;
-            bgDom.style.cssText = 'left: ' + y/90*max + 'px; top: ' + x/90*max + 'px';
+            var max = 375;
+            bgDom.style.cssText = 'left: ' + y/90*max*0.01 + 'rem; top: ' + x/90*max*0.01 + 'rem';
         }
+
+     
+        var initScreen=function(callback){//初始化html  font-size
+    // $("html").css("font-size",document.documentElement.clientHeight/document.documentElement.clientWidth<1.5 ? (document.documentElement.clientHeight/603*312.5+"%") : (document.documentElement.clientWidth/375*312.5+"%")); //单屏全屏布局时使用,短屏下自动缩放
+    $("html").css("font-size",document.documentElement.clientWidth/375*312.5+"%");//长页面时使用,不缩放
+    if(callback)callback();
+}
+
+
+function _onorientationchange(e){
+    if(window.orientation==90||window.orientation==-90){
+        $("#forhorview").css("display", "-webkit-box");  //显示竖屏浏览提示框
+    }else{//竖屏下恢复默认显示效果
+        var st=setTimeout(initScreen,300);
+         $("#forhorview").css("display", "none");    
+    }
+    _resize(e);
+}
+$(function(){
+    initScreen();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize",     function(e){_onorientationchange(e);}, false);
+})
     </script>
 </body>
 </html>
