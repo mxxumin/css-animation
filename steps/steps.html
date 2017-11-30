@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css序列帧动画——timing-function: steps()</title>
+	<style>
+		.audio1, .audio2, .audio3{
+			width:174px;
+			height:50px;
+			background:url(img/audio.png) left top no-repeat;
+			cursor:pointer;
+		}
+		.playing1, .playing2, .playing3{
+			width:174px;
+			height:50px;
+			background:url(img/audio-playing.png) left top no-repeat;
+		}
+		.playing1{
+			animation:audioPlaying steps(3, end) 1s infinite;
+		}
+		.playing2{
+			animation:audioPlaying steps(3, start) 1s infinite;
+		}
+		.playing3{
+			animation:audioPlaying steps(3, end) 1s infinite;
+		}
+		@keyframes audioPlaying{
+			0%{
+				background-position:0 0;
+			}
+			100%{
+				background-position:0 -150px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div>steps(num)</div>
+	<div class="audio1"></div> <!--steps(num)-->
+	<div>steps(num, start)</div>
+	<div class="audio2"></div> <!--steps(num, start)-->
+	<div>steps(num, end)</div>
+	<div class="audio3"></div> <!--steps(num, end)-->
+
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+
+		function playing(clickObj, animationClass){
+
+			var audioPlayStatus = false;
+
+			clickObj.click(function(){
+				if(!audioPlayStatus){
+					$(this).addClass(animationClass);
+					audioPlayStatus = !audioPlayStatus;
+				}else{
+					$(this).removeClass(animationClass);
+					audioPlayStatus = !audioPlayStatus;
+				}
+			})
+		}
+
+		playing($('.audio1'), 'playing1');
+
+		playing($('.audio2'), 'playing2');
+		
+		playing($('.audio3'), 'playing3');
+
+	</script>
+</body>
+</html>
