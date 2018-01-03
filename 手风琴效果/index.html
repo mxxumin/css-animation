@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手风琴效果</title>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		.accordian-container{
+			width:1200px;
+			height:520px;
+			margin:0 auto;
+			list-style:none;
+			background:#ccc;
+		}
+		.accordian-item{
+			position:relative;
+			float:left;
+			overflow:hidden;
+			width:120px;
+			height:520px;
+			margin-right:5px;
+			cursor:pointer;
+		}
+		.accordian-item .s-img{
+			position:absolute;
+			top:0;
+			left:0;
+			width:120px;
+			height:520px;
+			opacity:1;
+			-webkit-transition:all 1.5s ease;
+			-moz-transition:all 1.5s ease;
+			-ms-transition:all 1.5s ease;
+			-o-transition:all 1.5s ease;
+			transition:all 1.5s ease;
+		}
+		.accordian-item .b-img{
+			position:absolute;
+			top:0;
+			left:0;
+			width:693px;
+			height:520px;
+			opacity:0;
+			-webkit-transition:all 1.5s ease;
+			-moz-transition:all 1.5s ease;
+			-ms-transition:all 1.5s ease;
+			-o-transition:all 1.5s ease;
+			transition:all 1.5s ease;
+		}
+		.item1 .s-img{
+			background:url(img/s-1.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item1 .b-img{
+			background:url(img/b-1.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item2 .s-img{
+			background:url(img/s-2.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item2 .b-img{
+			background:url(img/b-2.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item3 .s-img{
+			background:url(img/s-3.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item3 .b-img{
+			background:url(img/b-3.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item4 .s-img{
+			background:url(img/s-4.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item4 .b-img{
+			background:url(img/b-4.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item5 .s-img{
+			background:url(img/s-5.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.item5 .b-img{
+			background:url(img/b-5.png) left top no-repeat;
+			background-size:100% auto;
+		}
+		.active{
+			width:693px;
+		}
+		.active .s-img{
+			opacity:0;
+		}
+		.active .b-img{
+			opacity:1;
+		}
+	</style>
+</head>
+<body>
+	<ul class="accordian-container">
+		<li class="accordian-item item1 active">
+			<div class="s-img"></div>
+			<div class="b-img"></div>
+		</li>
+		<li class="accordian-item item2">
+			<div class="s-img"></div>
+			<div class="b-img"></div>
+		</li>
+		<li class="accordian-item item3">
+			<div class="s-img"></div>
+			<div class="b-img"></div>
+		</li>
+		<li class="accordian-item item4">
+			<div class="s-img"></div>
+			<div class="b-img"></div>
+		</li>
+		<li class="accordian-item item5">
+			<div class="s-img"></div>
+			<div class="b-img"></div>
+		</li>
+	</ul>
+	<script src="jquery/jquery-3.2.1.min.js"></script>
+	<script>
+		$(".accordian-container li").on("mouseover", function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		})
+	</script>
+</body>
+</html>
