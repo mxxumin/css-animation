@@ -3,7 +3,7 @@
 ![](img/波浪.gif)
 ***
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/%E6%B3%A2%E6%B5%AA%E7%A7%BB%E5%8A%A8/index.html):point_left:
+`Demo`:point_right:[演示地址](https://xm2by.github.io/css-animation/%E6%B3%A2%E6%B5%AA%E7%A7%BB%E5%8A%A8/index.html):point_left:
 
 * 实现代码见`index.html`文件
 * 图片素材见`img`文件

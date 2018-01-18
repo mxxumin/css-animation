@@ -1,6 +1,6 @@
 # css序列帧动画——timing-function: steps() :art::art::art:
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/steps/steps.html):point_left:
+`Demo`:point_right:[演示地址](https://xm2by.github.io/css-animation/steps/steps.html):point_left:
 
 ## steps(num, [start|end])
 

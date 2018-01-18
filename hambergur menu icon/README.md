@@ -5,7 +5,7 @@
 ![](img/hambergur-menu-btn.gif)
 ***
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/hambergur%20menu%20icon/index.html):point_left:
+`Demo`:point_right:[演示地址](https://xm2by.github.io/css-animation/hambergur%20menu%20icon/index.html):point_left:
 
 ### 文件中列出了5种功能相似，但在实现上略有不同的汉堡形状菜单按钮，思路大致分为两种。
 

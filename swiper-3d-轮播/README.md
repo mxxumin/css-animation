@@ -9,7 +9,7 @@
 ![](img/lunbo.gif)
 ***
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/swiper-3d-%E8%BD%AE%E6%92%AD/index.html):point_left:
+`Demo`:point_right:[演示地址](https://xm2by.github.io/css-animation/swiper-3d-%E8%BD%AE%E6%92%AD/index.html):point_left:
 
 ### swiper插件中coverflow效果配制参数说明：
 ***

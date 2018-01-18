@@ -5,9 +5,9 @@
 ![](img/qrcode-scan.gif)
 ***
 
-`Demo1`:point_right:[演示地址](https://mxxumin.github.io/css-animation/%E6%89%AB%E6%8F%8F%E4%BA%8C%E7%BB%B4%E7%A0%81/demo1.html):point_left:
+`Demo1`:point_right:[演示地址](https://xm2by.github.io/css-animation/%E6%89%AB%E6%8F%8F%E4%BA%8C%E7%BB%B4%E7%A0%81/demo1.html):point_left:
 
-`Demo2`:point_right:[演示地址](https://mxxumin.github.io/css-animation/%E6%89%AB%E6%8F%8F%E4%BA%8C%E7%BB%B4%E7%A0%81/demo2.html):point_left:
+`Demo2`:point_right:[演示地址](https://xm2by.github.io/css-animation/%E6%89%AB%E6%8F%8F%E4%BA%8C%E7%BB%B4%E7%A0%81/demo2.html):point_left:
 
 >利用CSS3的animation属性为二维码添加扫描动画，让二维码显示更加形象生动，体验更加。 :satisfied::satisfied::satisfied:
 

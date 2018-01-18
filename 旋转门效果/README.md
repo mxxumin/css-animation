@@ -5,7 +5,7 @@
 ![](img/rotate.gif)
 ***
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/%E6%97%8B%E8%BD%AC%E9%97%A8%E6%95%88%E6%9E%9C/index.html):point_left:
+`Demo`:point_right:[演示地址](https://xm2by.github.io/css-animation/%E6%97%8B%E8%BD%AC%E9%97%A8%E6%95%88%E6%9E%9C/index.html):point_left:
 
 >旋转门效果——从字面上就很容易理解，它是实现像星级酒店大厅门口那种旋转门一样的效果，在页面中可以用来进行图片、文字等信息的展示，其正反两面都载有信息，用户可以根据个人喜好、需求来选择浏览不同的信息，让信息展示具有了交互性，令人印象深刻 :satisfied::satisfied::satisfied:
 

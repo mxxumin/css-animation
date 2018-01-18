@@ -5,7 +5,7 @@
 ![](img/shanshuo.gif)
 ***
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/%E9%97%AA%E7%83%81%E6%8F%90%E7%A4%BA/demo.html):point_left:
+`Demo`:point_right:[演示地址](https://xm2by.github.io/css-animation/%E9%97%AA%E7%83%81%E6%8F%90%E7%A4%BA/demo.html):point_left:
 
 >利用CSS3的animation属性添加动态提示效果，让提示更加形象生动，体验更加。 :satisfied::satisfied::satisfied:
 

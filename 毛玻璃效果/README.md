@@ -5,7 +5,7 @@
 ![](img/mao-bo-li.png)
 ***
 
-`Demo`:point_right:[演示地址](https://mxxumin.github.io/css-animation/%E6%AF%9B%E7%8E%BB%E7%92%83%E6%95%88%E6%9E%9C/index.html):point_left:
+`Demo`:point_right:[演示地址](https://xm2by.github.io/css-animation/%E6%AF%9B%E7%8E%BB%E7%92%83%E6%95%88%E6%9E%9C/index.html):point_left:
 
 >为元素添加毛玻璃效果后，有文本内容的地方，其背景模糊化，文本内容不受影响，然后配合页面背景（让页面背景与文本内容背景相同），虚实相映，瞬间就看起来就高大上:sunglasses::sunglasses::sunglasses:
 
